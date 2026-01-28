@@ -1,0 +1,266 @@
+{
+    "info": {
+        "name": "Coursework API v2.0 - Complete Collection",
+        "description": "Complete testing collection for Moodle Coursework API plugin",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "variable": [
+        {
+            "key": "BASE_URL",
+            "value": "http://15.188.104.80",
+            "description": "Your Moodle base URL"
+        },
+        {
+            "key": "TOKEN",
+            "value": "d6974175a36c7efc3fb41ee9f8bce0ee",
+            "description": "Your web service token"
+        },
+        {
+            "key": "STUDENT_ID",
+            "value": "4540",
+            "description": "Test student ID"
+        },
+        {
+            "key": "INTAKE_CODE",
+            "value": "Janmay2025",
+            "description": "Test intake code"
+        }
+    ],
+    "item": [
+        {
+            "name": "RESTful API Endpoints",
+            "item": [
+                {
+                    "name": "Get Student Coursework by Intake",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "{{TOKEN}}",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"studentid\": {{STUDENT_ID}},\n    \"intakecode\": \"{{INTAKE_CODE}}\",\n    \"includeactive\": 0\n}"
+                        },
+                        "url": {
+                            "raw": "{{BASE_URL}}/local/courseworkapi/restful.php/local_courseworkapi_get_student_coursework_by_intake",
+                            "host": ["{{BASE_URL}}"],
+                            "path": ["local", "courseworkapi", "restful.php", "local_courseworkapi_get_student_coursework_by_intake"]
+                        },
+                        "description": "Get all coursework for a student filtered by intake period"
+                    }
+                },
+                {
+                    "name": "Get All Intakes",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "{{TOKEN}}",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"activeonly\": 1\n}"
+                        },
+                        "url": {
+                            "raw": "{{BASE_URL}}/local/courseworkapi/restful.php/local_courseworkapi_get_all_intakes",
+                            "host": ["{{BASE_URL}}"],
+                            "path": ["local", "courseworkapi", "restful.php", "local_courseworkapi_get_all_intakes"]
+                        },
+                        "description": "Get all available intake periods"
+                    }
+                },
+                {
+                    "name": "Get Current Intake for Course Module",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "{{TOKEN}}",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"cmid\": 123\n}"
+                        },
+                        "url": {
+                            "raw": "{{BASE_URL}}/local/courseworkapi/restful.php/local_courseworkapi_get_current_intake_for_cm",
+                            "host": ["{{BASE_URL}}"],
+                            "path": ["local", "courseworkapi", "restful.php", "local_courseworkapi_get_current_intake_for_cm"]
+                        },
+                        "description": "Get the intake assignment for a specific course module"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Standard Moodle Web Service Endpoints",
+            "item": [
+                {
+                    "name": "Get Student Coursework (Standard)",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/x-www-form-urlencoded",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "urlencoded",
+                            "urlencoded": [
+                                {
+                                    "key": "wstoken",
+                                    "value": "{{TOKEN}}",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "wsfunction",
+                                    "value": "local_courseworkapi_get_student_coursework_by_intake",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "moodlewsrestformat",
+                                    "value": "json",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "studentid",
+                                    "value": "{{STUDENT_ID}}",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "intakecode",
+                                    "value": "{{INTAKE_CODE}}",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "includeactive",
+                                    "value": "0",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{BASE_URL}}/webservice/rest/server.php",
+                            "host": ["{{BASE_URL}}"],
+                            "path": ["webservice", "rest", "server.php"]
+                        },
+                        "description": "Standard Moodle web service format"
+                    }
+                },
+                {
+                    "name": "Get All Intakes (Standard)",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/x-www-form-urlencoded",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "urlencoded",
+                            "urlencoded": [
+                                {
+                                    "key": "wstoken",
+                                    "value": "{{TOKEN}}",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "wsfunction",
+                                    "value": "local_courseworkapi_get_all_intakes",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "moodlewsrestformat",
+                                    "value": "json",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "activeonly",
+                                    "value": "1",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{BASE_URL}}/webservice/rest/server.php",
+                            "host": ["{{BASE_URL}}"],
+                            "path": ["webservice", "rest", "server.php"]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Test Data Setup",
+            "item": [
+                {
+                    "name": "Test Token Validity",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/x-www-form-urlencoded",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "urlencoded",
+                            "urlencoded": [
+                                {
+                                    "key": "wstoken",
+                                    "value": "{{TOKEN}}",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "wsfunction",
+                                    "value": "core_webservice_get_site_info",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "moodlewsrestformat",
+                                    "value": "json",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{BASE_URL}}/webservice/rest/server.php",
+                            "host": ["{{BASE_URL}}"],
+                            "path": ["webservice", "rest", "server.php"]
+                        },
+                        "description": "Test if your token is valid and working"
+                    }
+                }
+            ]
+        }
+    ]
+}

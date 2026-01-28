@@ -1,0 +1,100 @@
+<div class="courseworkapi-documentation">
+    <h2>{{#str}}api_documentation, local_courseworkapi{{/str}}</h2>
+    
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3>{{#str}}endpoints, local_courseworkapi{{/str}}</h3>
+        </div>
+        <div class="card-body">
+            <h4>{{#str}}standard_endpoint, local_courseworkapi{{/str}}</h4>
+            <pre class="bg-light p-3"><code>POST {{standard_endpoint}}</code></pre>
+            
+            <h4>{{#str}}restful_endpoint, local_courseworkapi{{/str}}</h4>
+            <pre class="bg-light p-3"><code>POST {{restful_endpoint}}/{function_name}</code></pre>
+            
+            <h4>{{#str}}current_token, local_courseworkapi{{/str}}</h4>
+            <pre class="bg-light p-3"><code>{{token}}</code></pre>
+            <p class="text-muted">{{#str}}token_valid_until, local_courseworkapi{{/str}}: {{token_expiry}}</p>
+        </div>
+    </div>
+    
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3>{{#str}}available_functions, local_courseworkapi{{/str}}</h3>
+        </div>
+        <div class="card-body">
+            <div class="accordion" id="functionsAccordion">
+                {{#functions}}
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" 
+                                    data-target="#function{{id}}" aria-expanded="true">
+                                {{name}}
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="function{{id}}" class="collapse" data-parent="#functionsAccordion">
+                        <div class="card-body">
+                            <p><strong>Description:</strong> {{description}}</p>
+                            <h6>Parameters:</h6>
+                            <pre class="bg-light p-3"><code>{{parameters}}</code></pre>
+                            <h6>Example Request:</h6>
+                            <pre class="bg-light p-3"><code>{{example}}</code></pre>
+                        </div>
+                    </div>
+                </div>
+                {{/functions}}
+            </div>
+        </div>
+    </div>
+    
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3>{{#str}}postman_collection, local_courseworkapi{{/str}}</h3>
+        </div>
+        <div class="card-body">
+            <p>{{#str}}postman_instructions, local_courseworkapi{{/str}}</p>
+            <textarea class="form-control" rows="10" readonly>{{postman_collection}}</textarea>
+            <button class="btn btn-primary mt-3" onclick="navigator.clipboard.writeText(this.previousElementSibling.value)">
+                {{#str}}copy_to_clipboard, local_courseworkapi{{/str}}
+            </button>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-header">
+            <h3>{{#str}}code_examples, local_courseworkapi{{/str}}</h3>
+        </div>
+        <div class="card-body">
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#curl">cURL</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#php">PHP</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#javascript">JavaScript</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#delphi">Delphi/Pascal</a>
+                </li>
+            </ul>
+            <div class="tab-content mt-3">
+                <div id="curl" class="tab-pane active">
+                    <pre class="bg-light p-3"><code>{{curl_example}}</code></pre>
+                </div>
+                <div id="php" class="tab-pane">
+                    <pre class="bg-light p-3"><code>{{php_example}}</code></pre>
+                </div>
+                <div id="javascript" class="tab-pane">
+                    <pre class="bg-light p-3"><code>{{javascript_example}}</code></pre>
+                </div>
+                <div id="delphi" class="tab-pane">
+                    <pre class="bg-light p-3"><code>{{delphi_example}}</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

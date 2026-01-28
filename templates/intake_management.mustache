@@ -1,0 +1,112 @@
+<div class="courseworkapi-management">
+    <h2>{{#str}}intake_management, local_courseworkapi{{/str}}</h2>
+    
+    <div class="alert alert-info">
+        <h4>{{#str}}system_overview, local_courseworkapi{{/str}}</h4>
+        <p><strong>{{#str}}global_intakes, local_courseworkapi{{/str}}:</strong> {{#str}}global_intakes_desc, local_courseworkapi{{/str}}</p>
+        <ul>
+            <li>{{#str}}intake_instruction_1, local_courseworkapi{{/str}}</li>
+            <li>{{#str}}intake_instruction_2, local_courseworkapi{{/str}}</li>
+            <li>{{#str}}intake_instruction_3, local_courseworkapi{{/str}}</li>
+        </ul>
+        <p><strong>{{#str}}system_ready, local_courseworkapi{{/str}}:</strong> {{#str}}system_ready_desc, local_courseworkapi{{/str}}</p>
+    </div>
+    
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3>{{#str}}add_new_intake, local_courseworkapi{{/str}}</h3>
+        </div>
+        <div class="card-body">
+            <form method="post" action="{{formurl}}">
+                <input type="hidden" name="sesskey" value="{{sesskey}}">
+                <input type="hidden" name="action" value="add">
+                
+                <div class="form-group">
+                    <label for="intake_name">{{#str}}intake_name, local_courseworkapi{{/str}}</label>
+                    <input type="text" class="form-control" id="intake_name" name="name" 
+                           placeholder="e.g., Jan/May2025, Sep2024, Semester1-2025" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="intake_description">{{#str}}intake_description_optional, local_courseworkapi{{/str}}</label>
+                    <textarea class="form-control" id="intake_description" name="description" 
+                              rows="3" placeholder="Optional description for this intake period"></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">{{#str}}add_intake, local_courseworkapi{{/str}}</button>
+            </form>
+        </div>
+    </div>
+    
+    <h3>{{#str}}existing_intakes, local_courseworkapi{{/str}}</h3>
+    
+    {{#has_intakes}}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>{{#str}}intake_name, local_courseworkapi{{/str}}</th>
+                <th>{{#str}}code, local_courseworkapi{{/str}}</th>
+                <th>{{#str}}description, local_courseworkapi{{/str}}</th>
+                <th>{{#str}}status, local_courseworkapi{{/str}}</th>
+                <th>{{#str}}created_by, local_courseworkapi{{/str}}</th>
+                <th>{{#str}}created, local_courseworkapi{{/str}}</th>
+                <th>{{#str}}actions, local_courseworkapi{{/str}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#intakes}}
+            <tr>
+                <td><strong>{{name}}</strong></td>
+                <td><code>{{code}}</code></td>
+                <td>{{#description}}{{description}}{{/description}}{{^description}}No description{{/description}}</td>
+                <td>
+                    {{#active}}
+                    <span class="badge badge-success">ACTIVE</span>
+                    {{/active}}
+                    {{^active}}
+                    <span class="badge badge-secondary">INACTIVE</span>
+                    {{/active}}
+                </td>
+                <td>{{created_by}}</td>
+                <td>{{created_date}}</td>
+                <td>
+                    <a href="{{toggle_url}}" class="btn btn-sm {{#active}}btn-warning{{/active}}{{^active}}btn-success{{/active}}">
+                        {{#active}}Deactivate{{/active}}
+                        {{^active}}Activate{{/active}}
+                    </a>
+                </td>
+            </tr>
+            {{/intakes}}
+        </tbody>
+    </table>
+    {{/has_intakes}}
+    
+    {{^has_intakes}}
+    <div class="alert alert-warning">
+        {{#str}}no_intakes_found, local_courseworkapi{{/str}}
+    </div>
+    {{/has_intakes}}
+    
+    <div class="card mt-4">
+        <div class="card-header">
+            <h4>{{#str}}next_steps, local_courseworkapi{{/str}}</h4>
+        </div>
+        <div class="card-body">
+            <p>{{#str}}next_steps_desc, local_courseworkapi{{/str}}</p>
+            <ol>
+                <li>{{#str}}step_1, local_courseworkapi{{/str}}</li>
+                <li>{{#str}}step_2, local_courseworkapi{{/str}}</li>
+                <li>{{#str}}step_3, local_courseworkapi{{/str}}</li>
+                <li>{{#str}}step_4, local_courseworkapi{{/str}}</li>
+                <li>{{#str}}step_5, local_courseworkapi{{/str}}</li>
+            </ol>
+            
+            <h5>{{#str}}api_usage_example, local_courseworkapi{{/str}}</h5>
+            <pre class="bg-light p-3"><code>{{api_example}}</code></pre>
+            
+            <p class="mt-3">
+                <a href="{{doc_url}}" class="btn btn-info">{{#str}}view_api_documentation, local_courseworkapi{{/str}}</a>
+            </p>
+        </div>
+    </div>
+</div>

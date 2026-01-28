@@ -1,0 +1,40 @@
+﻿# Moodle Plugin .gitignore
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+*.log
+
+# Windows files
+desktop.ini
+
+# Node modules (if any build tools used)
+node_modules/
+
+# Moodle specific
+config.php
+localcache/
+cache/
+sessions/
+temp/
+trashdir/
+
+# Build artifacts
+*.min.js.map
+
+# Environment files
+.env
+.env.local
+
+# Test coverage
+coverage/
+phpunit.xml
