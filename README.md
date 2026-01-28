@@ -346,7 +346,7 @@ For collaborations, custom development, or consulting:
 
 <div align="center">
 
-**Developed with  for the Moodle community**
+**Developed with love ❤️ for the Moodle community**
 
 [![GitHub stars](https://img.shields.io/github/stars/mhawere/moodle-intake-coursework-api?style=social)](https://github.com/mhawere/moodle-intake-coursework-api)
 [![GitHub forks](https://img.shields.io/github/forks/mhawere/moodle-intake-coursework-api?style=social)](https://github.com/mhawere/moodle-intake-coursework-api/fork)
