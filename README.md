@@ -322,18 +322,25 @@ See [CHANGELOG.md](CHANGELOG.md) for detailed version history.
 
 ---
 
-##  Support
+## 💬 Support & Contact
 
 For issues, feature requests, or contributions:
--  [Report a bug](https://github.com/mhawere/moodle-intake-coursework-api/issues)
--  [Request a feature](https://github.com/mhawere/moodle-intake-coursework-api/issues)
--  [View documentation](https://github.com/mhawere/moodle-intake-coursework-api/wiki)
+- 🐛 [Report a bug](https://github.com/mhawere/moodle-intake-coursework-api/issues)
+- 💡 [Request a feature](https://github.com/mhawere/moodle-intake-coursework-api/issues)
+- 📖 [View documentation](https://github.com/mhawere/moodle-intake-coursework-api/wiki)
+- 📧 Collaborations: mohammed.y.basaleh@gmail.com
 
 ---
 
 ##  Show Your Support
 
-If this plugin helps you, please give it a  on GitHub!
+If this plugin helps you, please give it a star ⭐ on GitHub!
+
+## 📧 Contact & Collaboration
+
+For collaborations, custom development, or consulting:
+- 📮 Email: mohammed.y.basaleh@gmail.com
+- 💼 Available for Moodle development projects
 
 ---
 
