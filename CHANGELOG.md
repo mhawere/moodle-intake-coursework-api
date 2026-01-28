@@ -1,4 +1,4 @@
-﻿# Changelog
+# Changelog
 
 All notable changes to the Moodle Coursework API Plugin will be documented in this file.
 
@@ -148,8 +148,8 @@ Responses are now consistently structured:
 ## Support
 
 For questions about specific versions:
-- Check the [GitHub Releases](https://github.com/mhawere/MoodleCourseApi/releases)
-- Review [closed issues](https://github.com/mhawere/MoodleCourseApi/issues?q=is%3Aissue+is%3Aclosed)
+- Check the [GitHub Releases](https://github.com/mhawere/moodle-intake-coursework-api/releases)
+- Review [closed issues](https://github.com/mhawere/moodle-intake-coursework-api/issues?q=is%3Aissue+is%3Aclosed)
 - Open a new issue if needed
 
 ---

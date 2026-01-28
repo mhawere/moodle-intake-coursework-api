@@ -1,11 +1,11 @@
-﻿# Quick Installation Guide
+# Quick Installation Guide
 
 ## For Moodle Administrators
 
 ### Method 1: Via Moodle Interface (Easiest)
 
 1. **Download the latest release**
-   - Go to: https://github.com/mhawere/MoodleCourseApi/releases
+   - Go to: https://github.com/mhawere/moodle-intake-coursework-api/releases
    - Download the `.zip` file from the latest release
 
 2. **Install via Moodle**
@@ -29,7 +29,7 @@ cd /path/to/moodle
 cd local
 
 # Clone the repository
-git clone https://github.com/mhawere/MoodleCourseApi.git courseworkapi
+git clone https://github.com/mhawere/moodle-intake-coursework-api.git courseworkapi
 
 # Set proper permissions
 chmod -R 755 courseworkapi
@@ -138,8 +138,8 @@ curl -X POST "${MOODLE_URL}/local/courseworkapi/restful.php/local_courseworkapi_
 
 ## Getting Help
 
-- **Documentation**: https://github.com/mhawere/MoodleCourseApi
-- **Issues**: https://github.com/mhawere/MoodleCourseApi/issues
+- **Documentation**: https://github.com/mhawere/moodle-intake-coursework-api
+- **Issues**: https://github.com/mhawere/moodle-intake-coursework-api/issues
 - **API Docs**: Available in your Moodle at `/local/courseworkapi/documentation.php`
 
 ## Uninstallation
@@ -157,4 +157,4 @@ Site administration  Plugins  Plugins overview
 
 ---
 
-**Need more help?** Check the full [README](README.md) or open an [issue on GitHub](https://github.com/mhawere/MoodleCourseApi/issues).
+**Need more help?** Check the full [README](README.md) or open an [issue on GitHub](https://github.com/mhawere/moodle-intake-coursework-api/issues).

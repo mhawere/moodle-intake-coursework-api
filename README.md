@@ -1,10 +1,10 @@
-﻿#  Moodle Coursework API Plugin
+#  Moodle Coursework API Plugin
 
 [![Moodle](https://img.shields.io/badge/Moodle-4.0%20to%205.0-orange.svg)](https://moodle.org/)
 [![PHP](https://img.shields.io/badge/PHP-7.4%2B-blue.svg)](https://php.net/)
 [![License](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-2.0.0-green.svg)](https://github.com/mhawere/MoodleCourseApi/releases)
-[![Stable](https://img.shields.io/badge/Maturity-Stable-brightgreen.svg)](https://github.com/mhawere/MoodleCourseApi)
+[![Version](https://img.shields.io/badge/Version-2.0.0-green.svg)](https://github.com/mhawere/moodle-intake-coursework-api/releases)
+[![Stable](https://img.shields.io/badge/Maturity-Stable-brightgreen.svg)](https://github.com/mhawere/moodle-intake-coursework-api)
 
 > A comprehensive Moodle local plugin that enables lecturers to assign global intake periods to quizzes and assignments, with a robust API for retrieving student coursework data by intake.
 
@@ -32,7 +32,7 @@
 ##  Installation
 
 ### Quick Install (Recommended)
-1. Download the latest release from [GitHub Releases](https://github.com/mhawere/MoodleCourseApi/releases)
+1. Download the latest release from [GitHub Releases](https://github.com/mhawere/moodle-intake-coursework-api/releases)
 2. Go to **Site administration  Plugins  Install plugins**
 3. Upload the ZIP file and follow the installation wizard
 4. Purge all caches after installation
@@ -40,7 +40,7 @@
 ### Manual Install
 ```bash
 cd /path/to/moodle
-git clone https://github.com/mhawere/MoodleCourseApi.git local/courseworkapi
+git clone https://github.com/mhawere/moodle-intake-coursework-api.git local/courseworkapi
 ```
 
 Then:
@@ -50,7 +50,7 @@ Then:
 ### Via Git (for developers)
 ```bash
 cd /path/to/moodle/local
-git clone https://github.com/mhawere/MoodleCourseApi.git courseworkapi
+git clone https://github.com/mhawere/moodle-intake-coursework-api.git courseworkapi
 cd courseworkapi
 ```
 
@@ -325,9 +325,9 @@ See [CHANGELOG.md](CHANGELOG.md) for detailed version history.
 ##  Support
 
 For issues, feature requests, or contributions:
--  [Report a bug](https://github.com/mhawere/MoodleCourseApi/issues)
--  [Request a feature](https://github.com/mhawere/MoodleCourseApi/issues)
--  [View documentation](https://github.com/mhawere/MoodleCourseApi/wiki)
+-  [Report a bug](https://github.com/mhawere/moodle-intake-coursework-api/issues)
+-  [Request a feature](https://github.com/mhawere/moodle-intake-coursework-api/issues)
+-  [View documentation](https://github.com/mhawere/moodle-intake-coursework-api/wiki)
 
 ---
 
@@ -341,7 +341,7 @@ If this plugin helps you, please give it a  on GitHub!
 
 **Developed with  for the Moodle community**
 
-[![GitHub stars](https://img.shields.io/github/stars/mhawere/MoodleCourseApi?style=social)](https://github.com/mhawere/MoodleCourseApi)
-[![GitHub forks](https://img.shields.io/github/forks/mhawere/MoodleCourseApi?style=social)](https://github.com/mhawere/MoodleCourseApi/fork)
+[![GitHub stars](https://img.shields.io/github/stars/mhawere/moodle-intake-coursework-api?style=social)](https://github.com/mhawere/moodle-intake-coursework-api)
+[![GitHub forks](https://img.shields.io/github/forks/mhawere/moodle-intake-coursework-api?style=social)](https://github.com/mhawere/moodle-intake-coursework-api/fork)
 
 </div>

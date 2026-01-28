@@ -1,4 +1,4 @@
-﻿# Contributing to Moodle Coursework API Plugin
+# Contributing to Moodle Coursework API Plugin
 
 Thank you for your interest in contributing to the Moodle Coursework API Plugin! This document provides guidelines and instructions for contributing.
 
@@ -32,7 +32,7 @@ Thank you for your interest in contributing to the Moodle Coursework API Plugin!
 
 2. **Add upstream remote**
    ```bash
-   git remote add upstream https://github.com/mhawere/MoodleCourseApi.git
+   git remote add upstream https://github.com/mhawere/moodle-intake-coursework-api.git
    ```
 
 3. **Install in Moodle**
